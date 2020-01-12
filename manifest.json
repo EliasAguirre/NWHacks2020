@@ -3,12 +3,12 @@
   "name": "Test Extension",
   "version": "0.0",
   "offline_enabled": true,
+  "permissions": ["alarms"],
 
   "background": {
     "persistent": false,
     "scripts": ["background.js"]
   },
-
   "content_scripts": [{
     "matches": ["*://shop.saveonfoods.com/store/*"],
     "js": ["content.js"],
@@ -24,7 +24,4 @@
     },
     "default_popup": "popup.html"
   }
-
-  // No special permissions required...
-  //"permissions": []
 }

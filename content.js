@@ -5,13 +5,14 @@ chrome.runtime.sendMessage({
   subject: 'showPageAction',
 });
 
-// window.addEventListener('load', function load(event){
-  var createButton = document.getElementById('create_button');
-  createButton.addEventListener('click', function() { helloworld(); });
+// // window.addEventListener('load', function load(event){
+//   var createButton = document.getElementById('create_button');
+//   createButton.addEventListener('click', function() { helloworld(); });
 
-  function helloworld(){
-    alert("hi")
-  }
+//   function helloworld(){
+//     alert("hi")
+//   }
+
 // Listen for messages from the popup.
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   // First, validate the message's structure.
@@ -19,8 +20,11 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     // Collect the necessary data. 
     // (For your specific requirements `document.querySelectorAll(...)`
     //  should be equivalent to jquery's `$(...)`.)
+    const productList = document.querySelector('ul.productList');
+    const productInfoNodes = productList.querySelectorAll('.productInfo');
+    const productArray = Array.from(productInfoNodes);
     var domInfo = {
-      arr: document.querySelector('ul.productList').querySelectorAll('.productInfo').map((node)=>node.textContent.trim())
+      arr: productArray.map((node) => node.textContent.trim())
     };
 
     // Directly respond to the sender (popup), 
