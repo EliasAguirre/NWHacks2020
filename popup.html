@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        max-height: 165px;
+        min-height: 110px;
+        width: 130px;
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius: 1px;
+        background: white;
+      }
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      </style>
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+    <h3 style="text-align:center;">Carbon Values of Cart items</h3>
+    <div class="container">
+      <img src="img/ecovillage-logo-standard-quality.png"style="width:100%;">
+      <img src="img/reee.png" style="width:100%;">
+      <table border="5" cellpadding="2" style="border-collapse:collapse;">
+      <tr>
+        <td nowrap>Oil:</td>  
+        <td align="right"><span id="Oil">10g</span></td>
+      </tr>
+      <tr>
+        <td nowrap>Beef:</td>
+        <td align="right"><span id="inputs">22g</span></td>
+      </tr>
+      <tr>
+        <td nowrap>Chicken:</td>
+        <td align="right"><span id="inputs">15g</span></td>
+      </tr>
+    </table>
+    <h3>Total Carbon emmissions:           47g</h3>
+    <button class="sendButton">Send Information!</button>
+  </div>
+  </body>
+</html>
+
